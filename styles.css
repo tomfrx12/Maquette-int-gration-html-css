@@ -1,0 +1,165 @@
+:root {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+
+    padding: 0px 135px;
+
+    --black: #0D0619;
+    --white: #FDFCFF;
+    --primary: #533CA9;
+    --primaire-text: #30215F;
+    --tertiaire: #FDECD8;
+    --grey: #9998B1;
+
+    color: var(--black);
+}
+
+header {
+    padding: 8px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav_btn {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.cta_btn {
+    border-radius: 46px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-around;
+    gap: 4px;
+    background-color: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    width: 278px;
+
+}
+
+header .cta_btn {
+    width: 234px;
+}
+
+.frame119 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.frame114 {
+    display: flex;
+    gap: 96px;
+}
+
+.frame118 {
+    border: 32px solid;
+    border-color: var(--tertiaire);
+    position: relative;
+}
+
+.frame118>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("/img/background.png");
+    background-size: contain;
+    opacity: .1;
+    z-index :-1;
+}
+
+.frame88 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 64px 0px;
+}
+
+.frame113 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+h1, h2, h3 {
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 42px;
+    color: var(--primaire-text);
+}
+
+.frame113>p {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.frame1 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.frame555 {
+    display: flex;
+    gap: 32px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.field>input::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--grey);
+}
+
+.field input {
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: var(--grey);
+    padding: 8px 12px;
+    background-color: #ffffff;
+    width: 275px;
+}
+
+.frame4 {
+    display: flex;
+    gap: 8px;
+}
+
+.frame1>input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 2px solid;
+    border-color: var(--grey);
+    background-color: var(--white);
+}
+
+.frame4 label {
+    font-size: 400;
+    font-size: 12px;
+}
