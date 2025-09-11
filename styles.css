@@ -323,3 +323,97 @@ h1 {
     font-weight: 400;
     font-size: 16px;
 }
+
+.consequence {
+    display: flex;
+    gap: 64px;
+    padding: 128px 0px;
+}
+
+.frame109 {
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+}
+
+.frame101 {
+    display: flex;
+    gap: 128px;
+}
+
+.frame175 {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 32px;
+    gap: 8px;
+    background-color: var(--tertiaire);
+}
+
+.frame175 img {
+    mix-blend-mode: multiply;
+}
+
+.frame123 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.frame123 h2 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.frame134, .frame135 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.frame134 p, .frame135 p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.layout h2 {
+    display: flex;
+    padding-top: 128px;
+    padding-bottom: 32px;
+    gap: 64px;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.cards_layout {
+    display: flex;
+    gap: 24px;
+    padding: 32px 0px;
+}
+
+.column_layout {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 32px;
+    gap: 32px;
+    background-color: var(--white);
+    box-shadow: 0px 6px 12px rgba(83, 60, 169, 0.15);
+    width: 274px;
+}
+
+.title_layout {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.title_layout img {
+    width: 48px;
+    height: 48px;
+}
+
+.title_layout p {
+    font-weight: 400;
+    font-size: 20px;
+}
