@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,55 +11,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Love+Ya+Like+A+Sister&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <title>Ceci est un super ebook</title>
 </head>
 <body>
     <header>
         <img src="/img/Logo.png" alt="Logo Ink-Pact Copywriting" class="logo"/>
-        <nav>
-            <a href="#" class="nav_btn">Le guide</a>
-            <a href="#" class="nav_btn">Témoignages</a>
-            <a href="#" class="nav_btn">Qui suis-je ?</a>
-            <a href="#" class="nav_btn">FAQ</a>
+        <nav class="navig-desktop">
+            <a href="#guide" class="nav_btn">Le guide</a>
+            <a href="#temoignage" class="nav_btn">Témoignages</a>
+            <a href="#quisuisje" class="nav_btn">Qui suis-je ?</a>
+            <a href="#faq" class="nav_btn">FAQ</a>
             <a href="#" class="cta_btn">
                 <p>Je télécharge le guide</p>
                <img src="/img/svg/down_arrow.svg" alt="Icon down arrow"/> 
             </a>
         </nav>
+        <a class="menu">
+            <img class="burger-svg" src="/img/svg/menuburger.svg" alt="svg menu burger">
+            <img class="cross-svg" src="/img/svg/cross.svg" alt="svg cross">
+        </a>
+        <a data-theme-toggler class="btn_darkmode">
+            <img class="moon" src="/img/svg/moon.svg" alt="moon svg">
+            <img class="sun" src="/img/svg/sun-3337.svg" alt="sun svg">
+        </a>
     </header>
 
     <main>
         <section class="hero_section">
-            <div class="frame119">
-                <div class="frame114">
-                    <div class="frame118">
-                        <div></div>
-                        <img src="img/mockup_ebook.png" alt="mockup_ebook" class="mockup"/>
+            <div class="frame114">
+                <div class="frame118">
+                    <div class="bg"></div>
+                    <img src="img/mockup_ebook.png" alt="mockup_ebook" class="mockup"/>
+                </div>
+                <div class="frame88">
+                    <div class="frame113">
+                        <h1>Libère-toi du syndrome de l'imposteur et réussis ton lancement en tant que coach</h1>
+                        <p>Garantie: 100% passage à l’action avec sérénité, confiance et résultats</p>
                     </div>
-                    <div class="frame88">
-                        <div class="frame113">
-                            <h1>Libère-toi du syndrome de l'imposteur et réussis ton lancement en tant que coach</h1>
-                            <p>Garantie: 100% passage à l’action avec sérénité, confiance et résultats</p>
-                        </div>
-                        <div class="frame1">
-                                <div class="frame555">
-                                    <label class="field" for="name" name="Jean">Prénom
-                                        <input type="text" placeholder="Jean"/>
-                                    </label>
-    
-                                    <label class="field" for="mail">Adresse mail
-                                        <input type="mail" name="name" placeholder="jean@gmail.com"/>
-                                    </label>
-                                </div>
-                            <div class="frame4">
-                                <input class="checkbox" type="checkbox"/>
-                                <label>Recevez d’autres conseils et ressources d’Ink-Pact.<br> Vous pourrez vous désinscrire à tout moment</label>
+                    <div class="frame1">
+                            <div class="frame555">
+                                <label class="field" for="name" name="Jean">Prénom
+                                    <input type="text" placeholder="Jean"/>
+                                </label>
+
+                                <label class="field" for="mail">Adresse mail
+                                    <input type="mail" name="name" placeholder="jean@gmail.com"/>
+                                </label>
                             </div>
-                            <a href="#" class="cta_btn">
-                                <p>Je télécharge le guide</p>
-                                <img src="/img/svg/down_arrow.svg" alt="Icon down arrow"/> 
-                            </a>
+                        <div class="frame4">
+                            <input class="checkbox" type="checkbox"/>
+                            <label>Recevez d’autres conseils et ressources d’Ink-Pact.<br> Vous pourrez vous désinscrire à tout moment</label>
                         </div>
+                        <a href="#" class="cta_btn">
+                            <p>Je télécharge le guide</p>
+                            <img src="/img/svg/down_arrow.svg" alt="Icon down arrow"/> 
+                        </a>
                     </div>
                 </div>
             </div>
@@ -119,47 +126,45 @@
             </div>
         </section>
         <section class="consequence">
-            <div class="frame109">
-                <div class="frame101">
-                    <div class="frame175">
-                        <img src="img/young-woman-keeping-hand-forehead-shutting-eyes-blouse-cardigan-looking-fatigued-front-view.jpg" alt="young-woman-keeping-hand-forehead-shutting-eyes-blouse-cardigan-looking-fatigued-front-view"/>
+            <div class="frame101">
+                <div class="frame175">
+                    <img src="img/young-woman-keeping-hand-forehead-shutting-eyes-blouse-cardigan-looking-fatigued-front-view.jpg" alt="young-woman-keeping-hand-forehead-shutting-eyes-blouse-cardigan-looking-fatigued-front-view"/>
+                </div>
+                <div class="frame123">
+                    <h2>Les conséquences du syndrome</h2>
+                    <div class="frame134">
+                        <p>Quand tu prospectes pour de nouveaux clients, si tu n’es pas convaincu de ta valeur, rien ne se passe. La peur t’inhibe et t’empêche d’agir.</p>
                     </div>
-                    <div class="frame123">
-                        <h2>Les conséquences du syndrome</h2>
-                        <div class="frame134">
-                            <p>Quand tu prospectes pour de nouveaux clients, si tu n’es pas convaincu de ta valeur, rien ne se passe. La peur t’inhibe et t’empêche d’agir.</p>
-                        </div>
-                        <div class="frame135">
-                            <p>Et sans action, ton entreprise ne peut prospérer.</p>
-                        </div>
+                    <div class="frame135">
+                        <p>Et sans action, ton entreprise ne peut prospérer.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="layout">
+        <section id="guide" class="layout">
             <h2>Découvre dans ce guide comment :</h2>
             <div class="cards_layout">
                 <div class="column_layout">
                     <div class="title_layout">
-                        <img src="img/svg/magic-wand.svg" alt=""/>
+                        <img src="img/svg/magic-wand.svg" alt="svg magic wand"/>
                         <p><strong>Transformer</strong> plus rapidement des prospects en clients</p>
                     </div>
                 </div>
                 <div class="column_layout">
                     <div class="title_layout">
-                        <img src="img/svg/anchor.svg" alt=""/>
+                        <img src="img/svg/anchor.svg" alt="svg anchor"/>
                         <p><strong>Ancrer ta confiance</strong> d’entrepreneur(e) sur le long terme</p>
                     </div>
                 </div>
                 <div class="column_layout">
                     <div class="title_layout">
-                        <img src="img/svg/heart.svg" alt=""/>
+                        <img src="img/svg/heart.svg" alt="svg heart"/>
                         <p><strong>T'affirmer</strong> avec sérénité dans ta nouvelle activité professionnelle</p>
                     </div>
                 </div>
                 <div class="column_layout">
                     <div class="title_layout">
-                        <img src="img/svg/target.svg" alt=""/>
+                        <img src="img/svg/target.svg" alt="svg target"/>
                         <p><strong>Être impactant</strong> dans tes messages écrits</p>
                     </div>
                 </div>
@@ -177,7 +182,7 @@
             <div class="cards_guide">
                 <div class="card_guide">
                     <div class="frame98">
-                        <img src="img/svg/smiling-emoji.svg" alt=""/>
+                        <img src="img/svg/smiling-emoji.svg" alt="svg smiling emoji"/>
                         <p>Gagner du temps et être efficace</p>
                     </div>
                     <div class="frame130">
@@ -186,7 +191,7 @@
                 </div>
                 <div class="card_guide">
                     <div class="frame98">
-                        <img src="img/svg/happy-emoji.svg" alt=""/>
+                        <img src="img/svg/happy-emoji.svg" alt="svg happy emoji"/>
                         <p>Pouvoir être cohérent et régulier</p>
                     </div>
                     <div class="frame130">
@@ -195,7 +200,7 @@
                 </div>
                 <div class="card_guide">
                     <div class="frame98">
-                        <img src="img/svg/cool-emoji.svg" alt=""/>
+                        <img src="img/svg/cool-emoji.svg" alt=" svg cool emoji"/>
                         <p>Oser te lancer, entrer dans l’action</p>
                     </div>
                     <div class="frame130">
@@ -208,7 +213,7 @@
                 <img src="/img/svg/down_arrow.svg" alt="Icon down arrow"/> 
             </a>
         </section>
-        <section class="temoignage">
+        <section id="temoignage" class="temoignage">
             <div class="frame146">
                 <div class="frame552">
                     <div class="frame143">
@@ -262,7 +267,7 @@
                 </div>
             </div>
         </section>
-        <section class="who_im">
+        <section id="quisuisje" class="who_im">
             <div class="column_who_im">
                 <h2>Qui suis-je</h2>
                 <div class="paragraph">
@@ -283,32 +288,32 @@
                 </a>
             </div>
             <div class="frame174">
-                <img src="img/who_i_am.jpg" alt=""/>
+                <img src="img/who_i_am.jpg" alt=" who i am"/>
             </div>
         </section>
-        <section class="faq">
+        <section id="faq" class="faq">
             <h2>Questions fréquentes</h2>
-            <detail>
+            <details>
                 <summary>
-                    Le copywriting est-il un investissement rentable ?
-                    <img src="img/Icon/chevron-down.png" alt=""/>
-                </summary>
-                Le copywriting est un outil de persuasion écrit qui éveille des émotions et crée des connexions. Investir dans le copywriting, surtout pour le lancement d'une activité de coaching, peut transformer significativement les performances de ton entreprise. Que ce soit par l'augmentation des conversions, la visibilité ou la fidélisation des clients, le retour sur investissement peut être exceptionnel.
-            </detail>
-            <detail>
+                        Le copywriting est-il un investissement rentable ?
+                        <img src="img/svg/chevron-down.svg" alt="svg chevron down"/>
+                    </summary>
+                    Le copywriting est un outil de persuasion écrit qui éveille des émotions et crée des connexions. Investir dans le copywriting, surtout pour le lancement d'une activité de coaching, peut transformer significativement les performances de ton entreprise. Que ce soit par l'augmentation des conversions, la visibilité ou la fidélisation des clients, le retour sur investissement peut être exceptionnel.
+            </details>
+            <details>
                 <summary>
                     Le contenu écrit par un copywriter va-t-il bien me correspondre ?
-                    <img src="img/Icon/chevron-down.png" alt=""/>
+                    <img src="img/svg/chevron-down.svg" alt="svg chevron down"/>
                 </summary>
                 Le copywriting est un outil de persuasion écrit qui éveille des émotions et crée des connexions. Investir dans le copywriting, surtout pour le lancement d'une activité de coaching, peut transformer significativement les performances de ton entreprise. Que ce soit par l'augmentation des conversions, la visibilité ou la fidélisation des clients, le retour sur investissement peut être exceptionnel.
-            </detail>
-            <detail>
+            </details>
+            <details>
                 <summary>
                     Pourquoi investir dans une prestation de copywriting alors que je pourrais simplement utiliser Chat GPT ?
-                    <img src="img/Icon/chevron-down.png" alt=""/>
+                    <img src="img/svg/chevron-down.svg" alt="svg chevron down"/>
                 </summary>
                 Le copywriting est un outil de persuasion écrit qui éveille des émotions et crée des connexions. Investir dans le copywriting, surtout pour le lancement d'une activité de coaching, peut transformer significativement les performances de ton entreprise. Que ce soit par l'augmentation des conversions, la visibilité ou la fidélisation des clients, le retour sur investissement peut être exceptionnel.
-            </detail>
+            </details>
         </section>
         <section class="last_section">
             <div class="column_last_section">
@@ -322,27 +327,27 @@
     </main>
 
     <footer>
-        <div class="frame531">
-            <div class="frame528">
-                <div class="frame525">
-                    <img src="img/Logo.png" alt="">
-                </div>
-                <div class="frame527">
-                    <p>Liens légales</p>
-                    <div class="frame527">
-                        <p>Mentions légales</p>
-                        <p>Politique de confidentialité</p>
-                        <p>CGU</p>
-                    </div>
-                </div>
+        <div class="frame528">
+            <div class="frame525">
+                <img src="img/Logo.png" alt="Logo">
+            </div>
+            <div class="frame527">
+                <p>Liens légales</p>
                 <div class="frame536">
-                    <p>Contact</p>
-                    <div class="frame527">
-                        <p>Audrey Philippine</p>
-                        <p>+33 6 06 06 06 06</p>
-                        <p>audrey@gmail.com</p>
-                        <a href="img/Icon/linkedin.png"></a>
-                    </div>
+                    <p>Mentions légales</p>
+                    <p>Politique de confidentialité</p>
+                    <p>CGU</p>
+                </div>
+            </div>
+            <div class="frame527">
+                <p>Contact</p>
+                <div class="frame536">
+                    <p>Audrey Philippine</p>
+                    <p>+33 6 06 06 06 06</p>
+                    <p>audrey@gmail.com</p>
+                    <a href="#">
+                        <img src="/img/svg/linkedin.svg" alt="svg linkedin">
+                    </a>
                 </div>
             </div>
         </div>

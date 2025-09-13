@@ -1,23 +1,52 @@
 :root {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+}
 
-    padding: 0px 15%;
-
+:root[data-theme="light"] {
     --black: #0D0619;
-    --white: #FDFCFF;
+    --text-white: #FDFCFF;
+    --text-black: #0D0619;
+    --bg-cards: #FDFCFF;
     --primary: #533CA9;
     --primaire-text: #30215F;
     --tertiaire: #FDECD8;
     --grey: #9998B1;
-
+    --bg-color: #FFFFFF;
+    
     color: var(--black);
 }
 
+:root[data-theme="dark"] {
+    --text-white: #FDFCFF;
+    --text-black: #FDFCFF;
+    --black: #1b0b36;
+    --bg-cards: rgb(34, 12, 73);
+    --primary: #533CA9;
+    --tertiaire: #FDECD8;
+    --bg-color: #110438;
+
+    color: #FDFCFF;
+}
+
+html {
+    padding: 0;
+    background-color: var(--bg-color);
+}
+
+body > *:not(footer, header), .frame528 {
+    margin: 0px 10%;
+}
+
 header {
-    padding: 8px 0px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: var(--bg-cards);
+    z-index: 22;
+    padding: 0px 10%;
 }
 
 nav {
@@ -29,7 +58,7 @@ nav {
 .nav_btn {
     font-size: 16px;
     text-decoration: none;
-    color: black;
+    color: var(--text-black);
 }
 
 .cta_btn {
@@ -44,7 +73,7 @@ nav {
 }
 
 .cta_btn p {
-    color: var(--white);
+    color: var(--text-white);
     font-size: 18px;
 }
 
@@ -60,10 +89,150 @@ header .cta_btn img {
     align-self: center;
 }
 
-.frame119 {
-    display: flex;
+.btn_darkmode {
+    cursor: pointer;
+}
+
+.btn_darkmode img {
+    width: 24px;
+    height: 24px;
+}
+
+html[data-theme="light"] .moon, html[data-theme="dark"] .sun {
+    display: block;
+}
+
+html[data-theme="dark"] .moon, html[data-theme="light"] .sun {
+    display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .frame114 {
+        flex-direction: column;
+        gap: 0px !important;
+    }
+
+    .frame118 {
+        overflow: hidden;
+    }
+
+    .frame555, .frame94, .in_card_1, .frame101, .frame121, .cards_layout, .cards_guide, .frame146, .who_im, .frame528, .frame536 {
+        flex-direction: column;
+    }
+
+    .frame83 {
+        flex-direction: row !important;
+    }
+
+    .card_1, .column_layout, .card_guide, .frame552 {
+        width: initial !important;
+    }
+
+    .frame101 {
+        gap: 64px !important;
+    }
+
+    .frame557 {
+        flex-direction: column;
+        display: block !important;
+        gap: initial !important;
+    }
+
+    .frame528 {
+        gap: 16px;
+        align-items: flex-start !important;
+    }
+
+    .menu, .navig-desktop {
+        display: block
+    }
+
+    .navig-tel a {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin: 0;
+        right: 0;
+        top: 0;
+        min-width: 50vw;
+        height: 100vh;
+    }
+
+    .navig-tel {
+        display : block;
+        position: absolute;
+        right   : 0;
+        top     : 0;
+        margin  : 0;
+        width   : 100vw;
+        height  : 100vh;
+        z-index: 99;
+    }
+
+    .navig-tel.open {
+        transform: none;
+        position : fixed;
+    }
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+}
+.menu img {
+  width: 32px;
+  height: 32px;
+}
+
+.navig-desktop {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.burger-svg {
+    display: block;
+}
+
+.cross-svg {
+    display: none;
+}
+
+@media (max-width: 900px) {
+  .menu {
+    display: block;
+  }
+
+  .navig-desktop {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100vw;
+    background: var(--bg-color);
     flex-direction: column;
-    gap: 8px;
+    gap: 24px;
+    padding: 32px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+
+  header.menu-open .navig-desktop {
+    display: flex;
+  }
+
+  header.menu-open .cross-svg {
+    display: block;
+  }
+
+  header.menu-open .burger-svg {
+    display: none
+  }
 }
 
 .frame114 {
@@ -78,7 +247,7 @@ header .cta_btn img {
     position: relative;
 }
 
-.frame118>div {
+.frame118>div.bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -87,7 +256,11 @@ header .cta_btn img {
     background-image: url("/img/background.png");
     background-size: contain;
     opacity: .1;
-    z-index :-1;
+}
+
+.frame118 img {
+    position: relative;
+    z-index: -0;
 }
 
 .frame88 {
@@ -101,6 +274,18 @@ header .cta_btn img {
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+}
+
+.frame137 {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 8px;
+    gap: 32px;
+    background-color: var(--bg-cards);
+    box-shadow: 0px 6px 12px rgba(83, 60, 169, 0.15);
+    position: relative;
 }
 
 h1, h2, h3 {
@@ -168,7 +353,7 @@ h1 {
     border-radius: 2px;
     border: 2px solid;
     border-color: var(--grey);
-    background-color: var(--white);
+    background-color: var(--text-white);
 }
 
 .frame4 label {
@@ -182,7 +367,6 @@ h1 {
     align-items: center;
     padding: 96px 0px;
     gap: 8px;
-    background-color: var(--white);
 }
 
 .frame559 {
@@ -204,7 +388,7 @@ h1 {
 }
 
 .frame546>.frame547 {
-    background-color: var(--primaire-text);
+    background-color: #30215F;
     height: 24px;
     width: 75%;
 }
@@ -272,7 +456,7 @@ h1 {
 }
 
 .frame158 img{
-    mix-blend-mode: multiply;
+    mix-blend-mode: luminosity;
 }
 
 .frame548 {
@@ -299,7 +483,7 @@ h1 {
     border-radius: 8px;
     padding: 32px;
     gap: 32px;
-    background-color: var(--white);
+    background-color: var(--bg-cards);
     box-shadow: 0px 6px 12px rgba(83, 60, 169, 0.15);
     width: 368px;
 }
@@ -325,12 +509,6 @@ h1 {
     font-size: 16px;
 }
 
-.consequence {
-    display: flex;
-    gap: 64px;
-    padding: 128px 0px;
-}
-
 .frame109 {
     display: flex;
     flex-direction: column;
@@ -352,7 +530,7 @@ h1 {
 }
 
 .frame175 img {
-    mix-blend-mode: multiply;
+    mix-blend-mode: luminosity;
 }
 
 .frame123 {
@@ -398,7 +576,7 @@ h1 {
     border-radius: 8px;
     padding: 32px;
     gap: 32px;
-    background-color: var(--white);
+    background-color: var(--bg-cards);
     box-shadow: 0px 6px 12px rgba(83, 60, 169, 0.15);
     width: 274px;
 }
@@ -453,7 +631,7 @@ h1 {
     border-radius: 8px;
     padding: 32px;
     gap: 32px;
-    background-color: var(--white);
+    background-color: var(--bg-cards);
     box-shadow: 0px 6px 12px rgba(83, 60, 169, 0.15);
     width: 360px;
 }
@@ -522,9 +700,8 @@ h1 {
     padding: 32px;
     border-radius: 8px;
     gap: 32px;
-    background-color: var(--white);
+    background-color: var(--bg-cards);
     box-shadow: 0px 6px 12px rgba(83, 60, 169, 0.15);
-    min-height: max-content;
     position: relative;
 }
 
@@ -580,11 +757,15 @@ h1 {
 .frame557>p:first-child {
     font-family: "Love Ya Like A Sister", cursive;
     font-size: 150px;
+    max-height: min-content;
+    max-width: min-content;
 }
 
 .frame557>p:last-child {
     font-weight: 400;
     font-size: 16px;
+    max-height: min-content;
+    max-width: min-content;
 }
 
 .temoignage-paragraph p {
@@ -628,4 +809,159 @@ h1 {
     padding: 32px;
     gap: 8px;
     background-color: var(--tertiaire);
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    padding: 128px 0px;
+    gap: 32px;
+}
+
+.faq h2 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+details {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 6px 12px rgba(83, 60, 169, 0.15);
+}
+
+details summary {
+    padding: 32px;
+    cursor: pointer;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--primaire-text);
+    width: 100%;
+}
+
+summary img {
+    align-self: center;
+    width: 32px;
+    height: 32px;
+}
+
+details[open] {
+    padding: 32px;
+    display: inline;
+    font-weight: 400;
+}
+
+details[open] summary {
+    padding: 0px;
+    margin-bottom: 32px;
+}
+
+details[open] summary img {
+    transform: rotate(180deg)
+}
+
+.last_section {
+    display: flex;
+    justify-content: center;
+    padding: 128px 0px;
+    gap: 64px;
+}
+
+.column_last_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding: 32px;
+    gap: 32px;
+    box-shadow: 0px 6px 12px rgba(83, 60, 169, 0.15);
+    width: 100%;
+}
+
+.column_last_section>p:first-child {
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+}
+
+.frame531 {
+    display: flex;
+    flex-direction: column; 
+    padding-bottom: 32px;
+    gap: 32px;
+}
+
+.frame528 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 32px;
+}
+
+.frame525 {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.frame525 img {
+    width: 100px;
+    height: 100px;
+}
+
+.frame527 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.frame527>p:first-child {
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.frame536 {
+    display: flex;
+    gap: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--primaire-text);
+}
+
+.frame536 img {
+    width: 20px;
+    height: 20px;
+}
+
+.frame534 {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 144px;
+    background-color: var(--black);
+}
+
+.frame530 {
+    display: flex;
+    padding: 8px 0px;
+    gap: 8px;
+}
+
+.frame530 p {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text-white);
 }
